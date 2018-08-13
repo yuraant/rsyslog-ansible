@@ -1,0 +1,22 @@
+---
+# defaults file for rsyslog
+
+rsyslog_repeated_msg_reduction: "on"
+rsyslog_action_file_default_template: RSYSLOG_TraditionalFileFormat
+rsyslog_klog_permit_non_kernel_facility: "on"
+rsyslog_udp_enable: false
+rsyslog_udp_address: 127.0.0.1
+rsyslog_udp_port: 514
+rsyslog_apps: []
+rsyslog_packages:
+  - rsyslog
+rsyslog_service_name: rsyslog
+rsyslog_file_owner: syslog
+rsyslog_file_group: adm
+rsyslog_file_create_mode: "0640"
+rsyslog_dir_create_mode: "0755"
+rsyslog_umask: "0022"
+rsyslog_priv_drop_to_user: syslog
+rsyslog_priv_drop_to_group: syslog
+rsyslog_work_directory: /var/spool/rsyslog
+rsyslog_include_config: /etc/rsyslog.d/*.conf
